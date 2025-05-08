@@ -1,0 +1,30 @@
+# Ignore common build files and compiled binaries
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.a
+*.lib
+
+# Ignore CMake build directories
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore SDL-generated config files or temp files (if any)
+*.log
+*.tmp
+
+# Ignore IDE-specific files (optional)
+.vscode/
+*.user
+*.suo
+*.ncb
+*.vcxproj*
+*.idea/
+*.code-workspace
