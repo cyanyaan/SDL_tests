@@ -62,6 +62,7 @@ void close(){
 
 SDL_Surface* loadSurface(std::string path)
 {
+    SDL_Surface* optimizedSurface;
     SDL_Surface* loadedSurface = SDL_LoadBMP(path.c_str());
     if(loadedSurface == NULL){
         SDL_Log("Unable to load image %s, SDL Error: %s\n", path.c_str(), SDL_GetError());
