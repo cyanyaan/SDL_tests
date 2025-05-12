@@ -10,7 +10,7 @@ bool init();
 bool loadMedia();
 void close();
 
-SDL_Texture* loadTexture(std::string path);
+SDL_Texture* loadTexture(const std::string& path);
 SDL_Window* window = NULL;
 SDL_Renderer* gRenderer = NULL;
 SDL_Texture* gTexture = NULL;
@@ -36,7 +36,7 @@ bool init(){
     return success;
 }
 
-SDL_Texture* loadTexture(std::string path){
+SDL_Texture* loadTexture(const std::string& path){
     SDL_Texture* newTexture = NULL;
     SDL_Surface* loadedSurface = IMG_Load(path.c_str());
     if (loadedSurface == NULL){
@@ -97,6 +97,7 @@ int main(){
                 SDL_RenderClear(gRenderer);
                 SDL_RenderTexture(gRenderer, gTexture, NULL, NULL);
                 SDL_RenderPresent(gRenderer);
+                
             }
         }
     }
